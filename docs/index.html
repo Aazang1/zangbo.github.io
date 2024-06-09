@@ -16,6 +16,15 @@
       color: #fff;
       padding: 20px 0;
       text-align: center;
+ 
+      background-size: cover;
+      /* 添加背景动画 */
+      animation: gradient 10s ease infinite;
+    }
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     main {
       width: 80%;
@@ -27,6 +36,9 @@
     }
     h1 {
       text-align: center;
+      color: #333;
+      font-family: 'Arial Black', sans-serif;
+      font-size: 36px;
     }
     .features {
       display: flex;
@@ -40,6 +52,13 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       margin: 10px;
+      transition: transform 0.3s ease-in-out;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .feature:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     }
     footer {
       background-color: #007bff;
@@ -50,7 +69,6 @@
       bottom: 0;
       width: 100%;
     }
-    /* 添加媒体查询以适应不同大小的屏幕 */
     @media (max-width: 768px) {
       .feature img {
         max-width: 100%;
@@ -63,19 +81,41 @@
 
 <header>
   <h1>来软工，就对了！！！</h1>
+  <p>探索软工世界的奇妙之旅</p>
 </header>
 
 <main>
   <div class="features">
     <div class="feature">
       <h2>唯一真神</h2>
-      <!-- 确保图片路径正确 -->
       <img src="真神.jpg" alt="唯一真神">
+      <p>追求代码之美</p>
     </div>
     <div class="feature">
       <h3>QQ总群，非本专业勿扰</h3>
-      <!-- 确保图片路径正确 -->
       <img src="img.png" alt="QQ总群">
+      <p>与志同道合者交流</p>
+    </div>
+    <div class="feature">
+      <h3>专业导师指导</h3>
+      <img src="导师.jpg" alt="专业导师">
+      <p>学有所成，助你成为行业精英</p>
+    </div>
+    <div class="feature">
+      <h3>项目实践机会</h3>
+      <img src="项目.jpg" alt="项目实践">
+      <p>实战锻炼，提升技能</p>
+    </div>
+    <!-- 添加更多特色 -->
+    <div class="feature">
+      <h3>行业前沿技术</h3>
+      <img src="前沿技术.jpg" alt="行业前沿技术">
+      <p>领先一步，掌握最新技术</p>
+    </div>
+    <div class="feature">
+      <h3>全球视野</h3>
+      <img src="全球视野.jpg" alt="全球视野">
+      <p>走出国门，拓展国际视野</p>
     </div>
   </div>
 </main>
